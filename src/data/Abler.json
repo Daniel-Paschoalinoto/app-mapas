@@ -1,0 +1,176 @@
+{
+    "root": {
+        "comentario": "",
+        "xpath": "//*[@id='list-vacancy']//tr[not(ancestor::thead)]"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//tr[not(ancestor::thead)]//td[1]",
+        "processadores": [
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": "[0-9]",
+                "para": "-"
+            },
+            {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "-",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//*[@class='card-body card-description']",
+        "processadores": [
+            {
+                "nome": "padraoDescricao",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "cidade": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//tr[not(ancestor::thead)]//td[5]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": ",",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": "Não divulgada",
+                "para": "Cidade da Empresa"
+            }
+        ]
+    },
+    "estado": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//tr[not(ancestor::thead)]//td[5]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexMatch",
+                "de": "-.+",
+                "para": "-"
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "href",
+        "comentario": "",
+        "xpath": "//tr[not(ancestor::thead)]//td[1]/a"
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "Intercept",
+        "comentario": "",
+        "parametro": "&page=2",
+        "rota_principal": "https://ashtalentos.abler.com.br/api_v/v1/vagas.json",
+        "script": ""
+    },
+    "total_vagas": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//h2[contains(text( ), 'processo') and contains(text( ), 'aberto')]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}

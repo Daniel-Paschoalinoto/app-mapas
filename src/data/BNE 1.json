@@ -1,0 +1,164 @@
+{
+    "root": {
+        "comentario": "O mapa em questão deve ser usado em urls como 'https://www.bne.com.br/trabalhe-conosco/', caso após o .com.br venha /jobs, usar a segunda o mapa 2.",
+        "xpath": "//section[contains(@class, 'job__vip__candidacy') or contains(@class, 'job__free__candidacy')]"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[contains(text(),'Descrição Geral')]/following-sibling::h2[1]",
+        "processadores": [
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//*[contains(text(),'Descrição Geral')]/following-sibling::h2[1]",
+        "processadores": [
+            {
+                "nome": "padraoDescricao",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "cidade": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[contains(@class, 'job__detail') and contains(., 'Localização:')]//strong/following-sibling::text( )",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": ",",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "/",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "estado": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[contains(@class, 'job__detail') and contains(., 'Localização:')]//strong/following-sibling::text( )",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": "/",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "href",
+        "comentario": "",
+        "xpath": "//*[@class='job__title']//a"
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "",
+        "comentario": "Confirmar parâmetro",
+        "parametro": "?page=2",
+        "rota_principal": "https://www.bne.com.br/trabalhe-conosco/employercuritiba/vagas-de-emprego-em-curitiba-pr/",
+        "script": ""
+    },
+    "total_vagas": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}

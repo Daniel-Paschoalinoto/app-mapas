@@ -1,0 +1,165 @@
+{
+    "root": {
+        "comentario": "",
+        "xpath": "//*[@id='website_block_jobs']//*[@class='jobcard-item']"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@class='jobcard-item']//h3",
+        "processadores": [
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//*[@id='spandesc']",
+        "processadores": [
+            {
+                "nome": "padraoDescricao",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+        
+    },
+    "cidade": {
+        "posclick": "",
+        "comentario": "Em caso de filtro não inserir o processador 'Trabalho Remoto'",
+        "xpath": "//*[@class='jobcard-item']//p[1]",
+        "processadores": [
+            {
+                "nome": ",",
+                "tipo": "SplitFirst",
+                "de": ",",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": "Trabalho Remoto",
+                "para": "Cidade da empresa"
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "estado": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "href",
+        "comentario": "",
+        "xpath": "//*[@class='jobcard-item']//a"
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "",
+        "comentario": "",
+        "parametro": "",
+        "rota_principal": "",
+        "script": ""
+    },
+    "total_vagas": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@class='job-count']",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}

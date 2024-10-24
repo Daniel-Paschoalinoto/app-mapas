@@ -1,0 +1,164 @@
+{
+    "root": {
+        "comentario": "",
+        "xpath": "//ul[contains(@class,'jsListVagas')]//li"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//div[contains(@id,'Name')]",
+        "processadores": [
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@id='VacancyHeader']/following-sibling::div[1]/p[1]",
+        "processadores": [
+            {
+                "nome": "padraoDescricao",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "cidade": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//span[contains(@id,'Location')]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "estado": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//span[contains(@id,'Location')]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexMatch",
+                "de": "-.+",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "-",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "href",
+        "comentario": "",
+        "xpath": "//ul[contains(@class,'jsListVagas')]//li/a"
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "",
+        "comentario": "",
+        "parametro": "?&pn=2",
+        "rota_principal": "https://www.infojobs.com.br/emprego-consultare-rh__63200.aspx",
+        "script": ""
+    },
+    "total_vagas": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[contains(text( ),'Número de vagas:')]/following-sibling::text( )[1]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//div[contains(text( ), 'anúncio') and contains(text( ), 'emprego')]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexMatch",
+                "de": ".+de",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//div[contains(text( ), 'anúncio') and contains(text( ), 'emprego')]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexMatch",
+                "de": "de.+",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}

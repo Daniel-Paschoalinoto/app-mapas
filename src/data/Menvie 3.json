@@ -1,0 +1,170 @@
+{
+    "root": {
+        "comentario": "Menvie 1: Mapa com links (Detalhes), Menvie 2: Mapa com balões CLT sobre o título, Menvie 3: Mapa SEM links (Detalhes)",
+        "xpath": "//*[@id='lista_vagas']//a"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@id='lista_vagas']//h3",
+        "processadores": [
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//*[contains(text( ), 'Atividades')]/following-sibling::div[1]",
+        "processadores": [
+            {
+                "nome": "padraoDescricao",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "cidade": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//li[strong[contains(text(), 'Endereço:')]]/text( )[normalize-space()]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "/",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "estado": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//li[strong[contains(text(), 'Endereço:')]]/text( )[normalize-space()]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": "/",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "href",
+        "comentario": "",
+        "xpath": "//*[@id='lista_vagas']//a"
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@id='lista_vagas']//*[contains(@class, 'icon-money mr-1')]//following-sibling::text( )",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "à",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": "$",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "",
+        "comentario": "",
+        "parametro": "",
+        "rota_principal": "",
+        "script": ""
+    },
+    "total_vagas": {
+        "posclick": true,
+        "comentario": "Identificar padrão da empresa, caso exista e captar campo.",
+        "xpath": "//li[contains(., 'Código da Vaga')]/following-sibling::li[contains(., 'Vaga')][1]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,188 @@
+{
+    "root": {
+        "comentario": "Caso no nome da empresa tenha termos genéricos como RH e a quantidade de páginas for alta demais omita o termo. Exemplo NONNA RH, o url deve ser https://www.catho.com.br/vagas/nonna/",
+        "xpath": "//*[@id='search-result']'//li"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@id='search-result']/ul/li/article/article/header/div",
+        "processadores": [
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "RegexMatch",
+                "de": ".+Nome da empresa",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": "Nome da empresa",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//*[@class='job-description']/text( )",
+        "processadores": [
+            {
+                "nome": "padraoDescricao",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "cidade": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@id='search-result']//button[1]/a/text( )",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "estado": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@id='search-result']//button[1]/a/text( )",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexMatch",
+                "de": "-.+",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "(",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "href",
+        "comentario": "",
+        "xpath": "//*[@id='search-result']//h2/a"
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//div[contains(@class,'salary')]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": " a ",
+                "para": "&"
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "&",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": "$",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "",
+        "comentario": "",
+        "parametro": "&page=2",
+        "rota_principal": "https://www.catho.com.br/vagas/grupo-souza-lima/?q=Grupo%20Souza%20Lima",
+        "script": ""
+    },
+    "total_vagas": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@id='search-result']//button[1]/a/text( )",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}

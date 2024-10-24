@@ -1,0 +1,23 @@
+{
+  "name": "mapas-vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "author": "Daniel Paschoalinoto - https://github.com/Daniel-Paschoalinoto",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.2.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.8"
+  }
+}
