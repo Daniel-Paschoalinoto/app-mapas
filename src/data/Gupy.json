@@ -48,7 +48,7 @@
             },
             {
                 "nome": "",
-                "tipo": "",
+                "tipo": "RegexReplace",
                 "de": "Trabalho Remoto",
                 "para": "Cidade da Empresa"
             }
