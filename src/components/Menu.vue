@@ -19,28 +19,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 const emit = defineEmits(['select-map']);
-const mapsList = ref([]);
-
-async function loadMaps() {
-  const mapFiles = import.meta.glob('@/data/*.json');
-
-  for (const path in mapFiles) {
-    const mapData = await mapFiles[path]();
-
-    const map = { nome: path.split('/').pop().replace('.json', ''), ...mapData };
-    mapsList.value.push(map);
+const props = defineProps({
+  mapsList: {
+    type: Array,
+    required: true,
   }
-}
-
-onMounted(() => {
-  loadMaps().then(() => {
-    if (mapsList.value.length > 0) {
-      emit('select-map', mapsList.value[0]);
-    }
-  });
 });
 
 const menuOffset = ref(-210);

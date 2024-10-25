@@ -1,30 +1,50 @@
 <template>
-  <div class="bg-white w-screen h-screen p-4">
-    <Menu @select-map="selectMap" />
+  <div class="bg-white w-screen h-screen p-4" v-if="isLoaded">
+    <Menu :mapsList="mapsList" @select-map="selectMap" />
     <MapDetails :map="selectedMap" />
+  </div>
+  <div v-else class="flex justify-center items-center h-screen">
+    <Spinner />
   </div>
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch, onMounted } from 'vue';
 import Menu from './components/Menu.vue';
-import MapDetails from './components/MapDetails.vue'; // Importa o novo componente
+import MapDetails from './components/MapDetails.vue';
+import Spinner from './components/Spinner.vue';
 
 const selectedMap = ref({});
+const mapsList = ref([]);
+const isLoaded = ref(false);
 
-// Função para selecionar o mapa recebido do Menu
+async function loadMaps() {
+  const mapFiles = import.meta.glob('@/data/*.json');
+
+  for (const path in mapFiles) {
+    const mapData = await mapFiles[path]();
+    const map = { nome: path.split('/').pop().replace('.json', ''), ...mapData };
+    mapsList.value.push(map);
+  }
+
+  if (mapsList.value.length > 0) {
+    selectedMap.value = mapsList.value[0];
+  }
+
+  isLoaded.value = true;
+}
+
 function selectMap(map) {
   selectedMap.value = map;
 }
 
-// Watch para atualizar o título da página
+onMounted(loadMaps);
+
 watch(selectedMap, (newMap) => {
   if (newMap.nome) {
-    document.title = newMap.nome; // Atualiza o título da página
+    document.title = newMap.nome;
   }
 });
-
-
 </script>
 
 <style scoped>
@@ -35,16 +55,11 @@ watch(selectedMap, (newMap) => {
 
 .bg-white {
   overflow-y: scroll;
-  /* Permite rolagem vertical */
   max-height: 100%;
-  /* Altura máxima do contêiner */
 }
 
-/* Oculta a barra de rolagem */
 .bg-white::-webkit-scrollbar {
   width: 0;
-  /* Oculta a largura da barra de rolagem */
   background: transparent;
-  /* Define a cor de fundo da barra de rolagem */
 }
 </style>
