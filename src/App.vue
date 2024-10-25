@@ -34,13 +34,13 @@ const loadingMessages = [
 ];
 
 function startLoadingTimer() {
-  const totalTime = loadingMessages.length * 3000;
+  const totalTime = loadingMessages.length * 2000;
   const increment = 100 / loadingMessages.length;
   loadingMessages.forEach((message, index) => {
     setTimeout(() => {
       tempo.value = index;
       progress.value += increment;
-    }, index * 3000);
+    }, index * 2000);
   });
 
   setTimeout(() => {
