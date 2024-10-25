@@ -1,30 +1,49 @@
 <template>
   <div class="bg-white w-screen h-screen p-4">
-    <Menu @select-map="selectMap" />
-    <MapDetails :map="selectedMap" />
+    <div v-if="loading" class="w-screen h-screen flex justify-center items-center">
+      <p class="loading-message">Carregando jsons...</p>
+    </div>
+
+    <div v-else>
+      <Menu @select-map="selectMap" />
+      <MapDetails :map="selectedMap" />
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch, onMounted } from 'vue';
 import Menu from './components/Menu.vue';
-import MapDetails from './components/MapDetails.vue'; // Importa o novo componente
+import MapDetails from './components/MapDetails.vue';
 
 const selectedMap = ref({});
+const tempo = ref(0);
+const loading = ref(true);
 
-// Função para selecionar o mapa recebido do Menu
+function startLoadingTimer() {
+  const interval = setInterval(() => {
+    if (tempo.value < 3) {
+      tempo.value++;
+    } else {
+      clearInterval(interval);
+      loading.value = false;
+    }
+  }, 1000);
+}
+
+onMounted(() => {
+  startLoadingTimer();
+});
+
 function selectMap(map) {
   selectedMap.value = map;
 }
 
-// Watch para atualizar o título da página
 watch(selectedMap, (newMap) => {
   if (newMap.nome) {
-    document.title = newMap.nome; // Atualiza o título da página
+    document.title = newMap.nome;
   }
 });
-
-
 </script>
 
 <style scoped>
@@ -35,16 +54,18 @@ watch(selectedMap, (newMap) => {
 
 .bg-white {
   overflow-y: scroll;
-  /* Permite rolagem vertical */
   max-height: 100%;
-  /* Altura máxima do contêiner */
 }
 
-/* Oculta a barra de rolagem */
+.loading-message {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
 .bg-white::-webkit-scrollbar {
   width: 0;
-  /* Oculta a largura da barra de rolagem */
   background: transparent;
-  /* Define a cor de fundo da barra de rolagem */
 }
 </style>
