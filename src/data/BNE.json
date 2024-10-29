@@ -1,12 +1,12 @@
 {
     "root": {
-        "comentario": "O mapa em questão deve ser usado em urls como 'https://www.bne.com.br/trabalhe-conosco/', caso após o .com.br venha /jobs, usar a segunda o mapa 2.",
-        "xpath": "//section[contains(@class, 'job__vip__candidacy') or contains(@class, 'job__free__candidacy')]"
+        "comentario": "O URL deve conter https://www.bne.com.br/jobs/nome da empresa",
+        "xpath": "//*[@class='itempg CompanyOffers__card']"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(text(),'Descrição Geral')]/following-sibling::h2[1]",
+        "xpath": " //*[@class='companyColor CompanyOffers__card__info']",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[contains(text(),'Descrição Geral')]/following-sibling::h2[1]",
+        "xpath": "//*[@class='job__description__content']",
         "processadores": [
             {
                 "nome": "padraoDescricao",
@@ -32,18 +32,18 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class, 'job__detail') and contains(., 'Localização:')]//strong/following-sibling::text( )",
+        "xpath": "//*[@class='OffersMobile CompanyOffers__card__info__place']",
         "processadores": [
-            {
-                "nome": "",
-                "tipo": "SplitLast",
-                "de": ",",
-                "para": ""
-            },
             {
                 "nome": "",
                 "tipo": "SplitFirst",
                 "de": "/",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "place",
                 "para": ""
             },
             {
@@ -57,12 +57,12 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class, 'job__detail') and contains(., 'Localização:')]//strong/following-sibling::text( )",
+        "xpath": "",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "SplitLast",
-                "de": "/",
+                "tipo": "",
+                "de": "",
                 "para": ""
             },
             {
@@ -73,10 +73,23 @@
             }
         ]
     },
-    "url_detalhe": {
-        "tipo": "href",
+    "tipo": {
+        "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='job__title']//a"
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "click",
+        "comentario": "",
+        "xpath": "//*[@class='itempg CompanyOffers__card']"
     },
     "salario": {
         "posclick": "",
@@ -99,9 +112,9 @@
     },
     "paginacao": {
         "tipo": "",
-        "comentario": "Confirmar parâmetro",
-        "parametro": "?page=2",
-        "rota_principal": "https://www.bne.com.br/trabalhe-conosco/employercuritiba/vagas-de-emprego-em-curitiba-pr/",
+        "comentario": "Não é necessário paginar.",
+        "parametro": "",
+        "rota_principal": "",
         "script": ""
     },
     "total_vagas": {

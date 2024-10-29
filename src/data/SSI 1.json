@@ -85,6 +85,19 @@
             }
         ]
     },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",

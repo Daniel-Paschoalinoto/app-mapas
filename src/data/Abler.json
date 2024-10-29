@@ -85,6 +85,19 @@
             }
         ]
     },
+    "tipo": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//*[@class='fas fa-building']/following-sibling::text( )",
+        "processadores": [
+            {
+                "nome": "padraoTipo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",

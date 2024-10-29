@@ -28,7 +28,6 @@
                 "para": ""
             }
         ]
-        
     },
     "cidade": {
         "posclick": "",
@@ -66,6 +65,19 @@
                 "de": "",
                 "para": ""
             },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
             {
                 "nome": "",
                 "tipo": "",

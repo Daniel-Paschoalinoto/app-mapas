@@ -73,6 +73,19 @@
             }
         ]
     },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@class='header-location']",
+        "processadores": [
+            {
+                "nome": "padraoTipo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",

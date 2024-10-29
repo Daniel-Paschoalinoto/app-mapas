@@ -15,6 +15,9 @@
   <Estado :map="map" :hasValueInMap="hasValueInMap(map.estado)" :processadoresMapped="processadoresMapped"
     @copyContent="copyToClipboard" />
 
+  <Tipo :map="map" :hasValueInMap="hasValueInMap(map.tipo)" :processadoresMapped="processadoresMapped"
+    @copyContent="copyToClipboard" />
+
   <Url_Detalhe :map="map" :hasValueInMap="hasValueInMap(map.url_detalhe)" @copyContent="copyToClipboard" />
 
   <Salario :map="map" :hasValueInMap="hasValueInMap(map.salario)" :processadoresMapped="processadoresMapped"
@@ -42,6 +45,7 @@ import Titulo from './sections/Titulo.vue';
 import Descricao from './sections/Descricao.vue';
 import Cidade from './sections/Cidade.vue';
 import Estado from './sections/Estado.vue';
+import Tipo from './sections/Tipo.vue';
 import Url_Detalhe from './sections/Url_Detalhe.vue';
 import Salario from './sections/Salario.vue';
 import Paginacao from './sections/Paginacao.vue';
@@ -105,6 +109,14 @@ const processadoresPadrao = {
       de: "([^\\.\\s])$",
       para: "$1."
     }
+  ],
+  padraoTipo: [
+    {
+      nome: "PadronizaModalidade",
+      tipo: "Eval",
+      de: "HtmlNode.InnerText.ToLower().Contains(\"hibrido\") || HtmlNode.InnerText.ToLower().Contains(\"híbrido\") ? \"hibrido\" : HtmlNode.InnerText.ToLower().Contains(\"office\") || HtmlNode.InnerText.ToLower().Contains(\"remoto\") || HtmlNode.InnerText.ToLower().Contains(\"remota\") ? \"homeoffice\" : \"presencial\"",
+      para: ""
+    }
   ]
 };
 
@@ -151,6 +163,7 @@ function mapProcessadores() {
             nome: p.nome,
             tipo: p.tipo,
             de: p.de,
+
             para: p.para
           }));
         } else {

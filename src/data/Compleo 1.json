@@ -79,6 +79,19 @@
             }
         ]
     },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
     "url_detalhe": {
         "tipo": "href",
         "comentario": "Testar link de saída, anomalia com relação a detecção de links que não estão na relação (ocorrência 05/06/24)",

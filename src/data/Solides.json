@@ -73,6 +73,19 @@
             }
         ]
     },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@class='flex flex-wrap gap-2']",
+        "processadores": [
+            {
+                "nome": "padraoTipo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
     "url_detalhe": {
         "tipo": "click",
         "comentario": "",

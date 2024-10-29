@@ -1,7 +1,7 @@
 {
     "root": {
         "comentario": "Caso no nome da empresa tenha termos genéricos como RH e a quantidade de páginas for alta demais omita o termo. Exemplo NONNA RH, o url deve ser https://www.catho.com.br/vagas/nonna/",
-        "xpath": "//*[@id='search-result']'//li"
+        "xpath": "//*[@id='search-result']//li"
     },
     "titulo": {
         "posclick": "",
@@ -87,6 +87,19 @@
                 "nome": "",
                 "tipo": "SplitFirst",
                 "de": "(",
+                "para": ""
+            }
+        ]
+    },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]
