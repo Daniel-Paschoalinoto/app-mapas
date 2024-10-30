@@ -76,10 +76,10 @@
     "tipo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@title='Modalidade de Trabalho']",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

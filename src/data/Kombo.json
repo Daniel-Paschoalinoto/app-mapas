@@ -76,10 +76,10 @@
     "tipo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "//tr[not(ancestor::thead) and not(ancestor::tfoot)]/td[6]",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

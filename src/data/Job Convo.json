@@ -80,12 +80,12 @@
         ]
     },
     "tipo": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@id='root']/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/p",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

@@ -74,12 +74,12 @@
         ]
     },
     "tipo": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@aria-label='Tipo de vaga e modelo de trabalho']",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

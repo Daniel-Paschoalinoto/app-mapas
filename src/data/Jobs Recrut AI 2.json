@@ -76,10 +76,10 @@
     "tipo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@id='jobs']/div/div/div/div/div[2]/div/div[2]/p/small",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

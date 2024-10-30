@@ -74,12 +74,12 @@
         ]
     },
     "tipo": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
-        "xpath": "",
+        "xpath": "//li[contains(text( ),'Modelo de Trabalho')]",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

@@ -76,10 +76,10 @@
     "tipo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@class='badge badge-secondary']",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

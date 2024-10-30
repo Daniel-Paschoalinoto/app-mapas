@@ -80,12 +80,12 @@
         ]
     },
     "tipo": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@class='list-unstyled']",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""
