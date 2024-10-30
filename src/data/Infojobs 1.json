@@ -74,12 +74,12 @@
         ]
     },
     "tipo": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@class='text-medium small font-weight-bold mb-4']",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

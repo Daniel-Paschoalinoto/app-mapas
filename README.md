@@ -27,3 +27,8 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Updates:
+
+1.0 - Versão com módulos padrão Orion e jsons.
+1.1 - Adição do componente tipo + processador padrão + adição do campo nos jsons.

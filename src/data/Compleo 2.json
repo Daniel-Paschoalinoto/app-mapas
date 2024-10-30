@@ -82,10 +82,10 @@
     "tipo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@id='__next']/div/div[2]/section/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[3]/span[2]",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoTipo",
                 "tipo": "",
                 "de": "",
                 "para": ""

@@ -114,7 +114,7 @@ const processadoresPadrao = {
     {
       nome: "PadronizaModalidade",
       tipo: "Eval",
-      de: "HtmlNode.InnerText.ToLower().Contains(\"hibrido\") || HtmlNode.InnerText.ToLower().Contains(\"híbrido\") ? \"hibrido\" : HtmlNode.InnerText.ToLower().Contains(\"office\") || HtmlNode.InnerText.ToLower().Contains(\"remoto\") || HtmlNode.InnerText.ToLower().Contains(\"remota\") ? \"homeoffice\" : \"presencial\"",
+      de: "HtmlNode.InnerText.ToLower().Contains(\"hibrido\") || HtmlNode.InnerText.ToLower().Contains(\"híbrido\") || HtmlNode.InnerText.ToLower().Contains(\"híbrida\") || HtmlNode.InnerText.ToLower().Contains(\"hibrida\") ? \"hibrido\" : HtmlNode.InnerText.ToLower().Contains(\"office\") || HtmlNode.InnerText.ToLower().Contains(\"remoto\") || HtmlNode.InnerText.ToLower().Contains(\"remota\") ? \"homeoffice\" : \"presencial\"",
       para: ""
     }
   ]
