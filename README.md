@@ -34,5 +34,5 @@ npm run build
 1.1 - Adição do componente tipo + processador padrãoTipo + adição do campo nos jsons.
 1.2 - Inclusão de mensagem sobre a posição do menu.
 1.3 - Adição componente header, ajustes de estilo e posicionamento.
-1.4 - Tornando processador tipo menos verboso
+1.4 - Tornando processador padrão tipo menos verboso.
 1.5 - Inclusão da versão no header.
