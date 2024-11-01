@@ -1,16 +1,22 @@
 <template>
     <header class="header">
         <h1 class="header-title">{{ map.nome }}</h1>
+        <span class="header-version">Versão {{ version }}</span>
     </header>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import packageInfo from '@/../package.json';
+
 const props = defineProps({
     map: {
         type: Object,
         required: true,
     }
 });
+
+const version = ref(packageInfo.version);
 </script>
 
 <style scoped>
@@ -27,11 +33,16 @@ const props = defineProps({
     left: 0;
     width: 100%;
     z-index: 10;
-    border: 1px solid #707aeb
+    border: 1px solid #707aeb;
 }
 
 .header-title {
     font-size: 21px;
     letter-spacing: 1px;
+}
+
+.header-version {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
 }
 </style>
