@@ -27,7 +27,7 @@ const props = defineProps({
     left: 0;
     width: 100%;
     z-index: 10;
-    border: 1px solid #5f6bef
+    border: 1px solid #707aeb
 }
 
 .header-title {

@@ -5,7 +5,7 @@
 <style scoped>
 .spinner {
     border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
+    border-top: 8px solid #616be8;
     border-radius: 50%;
     width: 50px;
     height: 50px;
