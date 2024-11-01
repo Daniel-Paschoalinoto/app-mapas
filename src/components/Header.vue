@@ -18,7 +18,7 @@ const props = defineProps({
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #727cf5, #515ee6);
+    background: linear-gradient(135deg, #616be8, #1b2481);
     color: white;
     padding: 10px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
