@@ -21,7 +21,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const emit = defineEmits(['select-map']);
+const emit = defineEmits(['select-map', 'menu-open']);
 const props = defineProps({
   mapsList: {
     type: Array,
@@ -38,6 +38,7 @@ function selectMap(map) {
 
 function moveMenuRight() {
   menuOffset.value = targetOffset;
+  emit('menu-open');
 }
 
 function moveMenuLeft() {

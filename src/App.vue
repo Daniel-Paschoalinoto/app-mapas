@@ -1,6 +1,9 @@
 <template>
   <div class="bg-white w-screen h-screen p-4" v-if="isLoaded">
-    <Menu :mapsList="mapsList" @select-map="selectMap" />
+    <p v-if="!menuOpened" class="top-notice">
+      Passe o mouse na borda azul à esquerda da página para acessar o menu
+    </p>
+    <Menu :mapsList="mapsList" @select-map="selectMap" @menu-open="handleMenuOpen" />
     <MapDetails :map="selectedMap" />
   </div>
   <div v-else class="flex justify-center items-center h-screen">
@@ -17,6 +20,7 @@ import Spinner from './components/Spinner.vue';
 const selectedMap = ref({});
 const mapsList = ref([]);
 const isLoaded = ref(false);
+const menuOpened = ref(false); // Estado para rastrear se o menu está aberto
 
 async function loadMaps() {
   const mapFiles = import.meta.glob('@/data/*.json');
@@ -36,6 +40,10 @@ async function loadMaps() {
 
 function selectMap(map) {
   selectedMap.value = map;
+}
+
+function handleMenuOpen() {
+  menuOpened.value = true;
 }
 
 onMounted(loadMaps);
@@ -61,5 +69,26 @@ watch(selectedMap, (newMap) => {
 .bg-white::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+
+.top-notice {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 </style>
