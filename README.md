@@ -31,4 +31,5 @@ npm run build
 ## Updates:
 
 1.0 - Versão com módulos padrão Orion e jsons.
-1.1 - Adição do componente tipo + processador padrão + adição do campo nos jsons.
+1.1 - Adição do componente tipo + processador padrãoTipo + adição do campo nos jsons.
+1.2 - Inclusão de mensagem sobre a posição do menu.
