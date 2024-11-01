@@ -5,7 +5,7 @@
       <div class="w-full flex justify-between items-center mb-2">
         <p class="w-full font-semibold text-lg">Lista de mapas</p>
       </div>
-      <div class="overflow-y-auto max-h-full hide-scrollbar">
+      <div class="overflow-y-auto max-h-full hide-scrollbar flex-1" style="padding-bottom: 3rem;">
         <div class="space-y-1">
           <button v-for="map in mapsList" :key="map.nome"
             class="rounded-md py-2 px-4 w-full bg-gray-200 text-gray-800 font-semibold hover:bg-gray-300 transition duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -49,7 +49,7 @@ function moveMenuLeft() {
 <style scoped>
 #menu {
   transition: transform 0.2s ease;
-  border: 2px solid #007bff;
+  border: 2px solid #6f7aed;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

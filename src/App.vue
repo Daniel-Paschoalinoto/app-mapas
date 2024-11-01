@@ -1,10 +1,13 @@
 <template>
   <div class="bg-white w-screen h-screen p-4" v-if="isLoaded">
-    <p v-if="!menuOpened" class="top-notice">
-      Passe o mouse na borda azul à esquerda da página para acessar o menu
-    </p>
-    <Menu :mapsList="mapsList" @select-map="selectMap" @menu-open="handleMenuOpen" />
-    <MapDetails :map="selectedMap" />
+    <Header :map="selectedMap" />
+    <div class="content">
+      <p v-if="!menuOpened" class="top-notice">
+        Interaja com a lateral esquerda da página para acessar o menu
+      </p>
+      <Menu :mapsList="mapsList" @select-map="selectMap" @menu-open="handleMenuOpen" />
+      <MapDetails :map="selectedMap" />
+    </div>
   </div>
   <div v-else class="flex justify-center items-center h-screen">
     <Spinner />
@@ -13,6 +16,7 @@
 
 <script setup>
 import { ref, watch, onMounted } from 'vue';
+import Header from './components/Header.vue';
 import Menu from './components/Menu.vue';
 import MapDetails from './components/MapDetails.vue';
 import Spinner from './components/Spinner.vue';
@@ -20,7 +24,7 @@ import Spinner from './components/Spinner.vue';
 const selectedMap = ref({});
 const mapsList = ref([]);
 const isLoaded = ref(false);
-const menuOpened = ref(false); // Estado para rastrear se o menu está aberto
+const menuOpened = ref(false);
 
 async function loadMaps() {
   const mapFiles = import.meta.glob('@/data/*.json');
@@ -71,9 +75,14 @@ watch(selectedMap, (newMap) => {
   background: transparent;
 }
 
+.content {
+  padding-top: 40px;
+
+}
+
 .top-notice {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.9);
@@ -84,6 +93,9 @@ watch(selectedMap, (newMap) => {
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   animation: blinker 2s linear infinite;
+  z-index: 10;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @keyframes blinker {
