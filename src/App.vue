@@ -73,7 +73,7 @@ watch(selectedMap, (newMap) => {
 
 .top-notice {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.9);
