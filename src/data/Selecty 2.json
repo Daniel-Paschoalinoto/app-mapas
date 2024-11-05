@@ -93,9 +93,9 @@
         ]
     },
     "url_detalhe": {
-        "tipo": "",
+        "tipo": "click",
         "comentario": "",
-        "xpath": ""
+        "xpath": "//*[contains(@id, 'vacancy-card-occupation')]"
     },
     "salario": {
         "posclick": "",
@@ -164,7 +164,7 @@
     "total_anuncios_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[contains(@class,'attrs') and contains(text( ),'encontradas')]",
         "processadores": [
             {
                 "nome": "",
