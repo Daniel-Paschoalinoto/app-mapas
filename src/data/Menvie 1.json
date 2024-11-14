@@ -6,7 +6,7 @@
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='row aos-init']//h2/text( )",
+        "xpath": "//*[@class='row aos-init']//h2/text( )[normalize-space()]",
         "processadores": [
             {
                 "nome": "padraoTitulo",
