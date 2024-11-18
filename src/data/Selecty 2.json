@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "(//*[contains(.,'Responsabilidades e atribuições')]/following-sibling::div[@class='detalhes'])[1]",
+        "xpath": "(//*[contains(.,'Responsibilities and duties')]/following-sibling::div[@class='detalhes'])[1]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
@@ -80,12 +80,12 @@
         ]
     },
     "tipo": {
-        "posclick": true,
+        "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='list-unstyled']",
+        "xpath": "",
         "processadores": [
             {
-                "nome": "padraoTipo",
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""
@@ -164,7 +164,7 @@
     "total_anuncios_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class,'attrs') and contains(text( ),'encontradas')]",
+        "xpath": "//*[contains(@class,'attrs') and contains(text( ),'found')]",
         "processadores": [
             {
                 "nome": "",
