@@ -17,7 +17,7 @@
         ]
     },
     "descricao": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
         "xpath": "//*[@id='VacancyHeader']/following-sibling::div[1]/p[1]",
         "processadores": [
@@ -118,7 +118,7 @@
         "script": ""
     },
     "total_vagas": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
         "xpath": "//*[contains(text( ),'Número de vagas:')]/following-sibling::text( )[1]",
         "processadores": [
