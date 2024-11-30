@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//*[@id='VacancyList']//a"
+        "xpath": "//*[@id='vagas_selecionadas']/div"
     },
     "titulo": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
-        "xpath": "//*[@id='VacancyList']//h3/text( )",
+        "xpath": "/html/body/div[2]/div/div/div[1]/div/div/div[1]/h3/text( )[1]",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@id='description']",
+        "xpath": "(//*[@class='card-body'])[2]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
@@ -31,8 +31,8 @@
     },
     "cidade": {
         "posclick": "",
-        "comentario": "Em caso de filtro não inserir o processador 'Cidade da empresa'",
-        "xpath": "//*[contains(@class, 'location')]/parent::div/following-sibling::text( )",
+        "comentario": "",
+        "xpath": "//*[@class='vaga_endereco']",
         "processadores": [
             {
                 "nome": "",
@@ -42,9 +42,9 @@
             },
             {
                 "nome": "",
-                "tipo": "RegexReplace",
-                "de": "Todo Brasil",
-                "para": "Cidade da empresa"
+                "tipo": "",
+                "de": "",
+                "para": ""
             },
             {
                 "nome": "",
@@ -57,7 +57,7 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class, 'location')]/parent::div/following-sibling::text( )",
+        "xpath": "//*[@class='vaga_endereco']",
         "processadores": [
             {
                 "nome": "",
@@ -76,10 +76,10 @@
     "tipo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='d-flex text-medium flex-wrap']",
+        "xpath": "",
         "processadores": [
             {
-                "nome": "padraoTipo",
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""
@@ -87,9 +87,9 @@
         ]
     },
     "url_detalhe": {
-        "tipo": "href",
+        "tipo": "click",
         "comentario": "",
-        "xpath": "//*[@id='VacancyList']//a"
+        "xpath": "//*[@id='vagas_selecionadas']/div/div/div/div[1]/h5/a"
     },
     "salario": {
         "posclick": "",
@@ -111,16 +111,16 @@
         ]
     },
     "paginacao": {
-        "tipo": "",
+        "tipo": "eval",
         "comentario": "",
-        "parametro": "?PageNumber=2",
-        "rota_principal": "https://concentrixbrasil.pandape.infojobs.com.br/",
-        "script": ""
+        "parametro": "",
+        "rota_principal": "script",
+        "script": "document.querySelector('#lazyload_vagas')?.style.display !== 'none' && document.querySelector('#lazyload_vagas').click()"
     },
     "total_vagas": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class, 'candidates')]/parent::div/following-sibling::text( )",
+        "xpath": "",
         "processadores": [
             {
                 "nome": "",
@@ -158,12 +158,12 @@
     "total_anuncios_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "/html/body/div[2]/div/div[2]/div/h4",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "RegexReplace",
+                "de": ".+de",
                 "para": ""
             },
             {

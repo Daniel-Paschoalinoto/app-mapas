@@ -75,12 +75,12 @@
                 "nome": "",
                 "tipo": "RegexMatch",
                 "de": "-.+",
-                "para": "-"
+                "para": ""
             },
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "Replace",
+                "de": "-",
                 "para": ""
             }
         ]
