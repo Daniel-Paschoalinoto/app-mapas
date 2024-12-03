@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "(//*[contains(.,'Responsibilities and duties')]/following-sibling::div[@class='detalhes'])[1]",
+        "xpath": "(//*[contains(.,'Responsabilidades e atribuições')]/following-sibling::div[@class='detalhes'])[1]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
