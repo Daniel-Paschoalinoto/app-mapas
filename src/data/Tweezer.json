@@ -158,7 +158,7 @@
     "total_anuncios_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "/html/body/div[2]/div/div[2]/div/h4",
+        "xpath": "//*[contains(@class, 'counter-vagas')]",
         "processadores": [
             {
                 "nome": "",
