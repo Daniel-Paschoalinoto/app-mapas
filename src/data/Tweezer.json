@@ -6,7 +6,7 @@
     "titulo": {
         "posclick": true,
         "comentario": "",
-        "xpath": "/html/body/div[2]/div/div/div[1]/div/div/div[1]/h3/text( )[1]",
+        "xpath": "//h3[contains(@class, 'card-title')]/text( )[1]",
         "processadores": [
             {
                 "nome": "padraoTitulo",
