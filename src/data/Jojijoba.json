@@ -1,0 +1,195 @@
+{
+    "root": {
+        "comentario": "",
+        "xpath": "//*[@class='offer']"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@class='offer-header']",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": "Nome da Empresa",
+                "para": ""
+            },
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": true,
+        "comentario": "",
+        "xpath": "//*[@class='permalink-subtitle']/following-sibling::p[1]",
+        "processadores": [
+            {
+                "nome": "padraoDescricao",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "cidade": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "/html/body/div[4]/div[2]/div[2]/div[1]/div/a/div[1]/div/span[1]/span[2]",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "estado": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "href",
+        "comentario": "",
+        "xpath": "//*[@class='offer']//a"
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "",
+        "comentario": "",
+        "parametro": "",
+        "rota_principal": "",
+        "script": ""
+    },
+    "total_vagas": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}
