@@ -17,7 +17,7 @@
             {
                 "nome": "",
                 "tipo": "RegexReplace",
-                "de": "Nome da Empresa",
+                "de": "Nome da Empresa.+",
                 "para": ""
             },
             {
