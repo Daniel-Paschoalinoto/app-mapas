@@ -1,6 +1,6 @@
 {
     "root": {
-        "comentario": "Esse layout também serve para o domínio empregosvagasbh",
+        "comentario": "Esse layout também serve para o domínio empregosvagasbh.com.br",
         "xpath": "//article[contains(@class, 'jobs') and not(descendant::*[contains(@class, 'jobs__selo')])]"
     },
     "titulo": {
