@@ -29,7 +29,7 @@
         ]
     },
     "descricao": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
         "xpath": "//p[@itemprop='description']",
         "processadores": [
