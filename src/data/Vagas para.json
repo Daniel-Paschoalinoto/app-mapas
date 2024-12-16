@@ -34,7 +34,7 @@
         "xpath": "//*[@class='job-description-text']",
         "processadores": [
             {
-                "nome": "",
+                "nome": "padraoDescricao",
                 "tipo": "",
                 "de": "",
                 "para": ""
