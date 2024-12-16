@@ -113,7 +113,7 @@
     "paginacao": {
         "tipo": "eval",
         "comentario": "",
-        "parametro": "",
+        "parametro": "eval",
         "rota_principal": "script",
         "script": "document.querySelector('#lazyload_vagas')?.style.display !== 'none' && document.querySelector('#lazyload_vagas').click()"
     },
