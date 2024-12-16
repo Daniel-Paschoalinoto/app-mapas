@@ -1,4 +1,4 @@
-## Mapas Orion Buildado em: https://daniel-paschoalinoto.github.io/mapas-orion/
+## Build em: https://daniel-paschoalinoto.github.io/app-mapas/
 
 This template should help get you started developing with Vue 3 in Vite.
 
