@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
-    "update": "git add . && git commit -m \"$npm_config_message\" && git push origin main"
+    "update": "git add . && git commit -m \"$npm_config_commit_message\" && git push origin main"
   },
   "dependencies": {
     "vue": "^3.5.12"
