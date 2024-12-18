@@ -9,12 +9,6 @@
         "xpath": "//tr[not(ancestor::thead)]//td[1]",
         "processadores": [
             {
-                "nome": "padraoTitulo",
-                "tipo": "",
-                "de": "",
-                "para": ""
-            },
-            {
                 "nome": "",
                 "tipo": "RegexReplace",
                 "de": "[0-9]",
@@ -24,6 +18,12 @@
                 "nome": "",
                 "tipo": "Replace",
                 "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]

@@ -9,12 +9,6 @@
         "xpath": "//*[@id='search-result']/ul/li/article/article/header/div",
         "processadores": [
             {
-                "nome": "padraoTitulo",
-                "tipo": "",
-                "de": "",
-                "para": ""
-            },
-            {
                 "nome": "",
                 "tipo": "RegexMatch",
                 "de": ".+Nome da empresa",
@@ -24,6 +18,12 @@
                 "nome": "",
                 "tipo": "RegexReplace",
                 "de": "Nome da empresa",
+                "para": ""
+            },
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]

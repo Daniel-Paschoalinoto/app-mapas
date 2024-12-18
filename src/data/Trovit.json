@@ -9,12 +9,6 @@
         "xpath": "//*[@class='item-info']",
         "processadores": [
             {
-                "nome": "padraoTitulo",
-                "tipo": "",
-                "de": "",
-                "para": ""
-            },
-            {
                 "nome": "",
                 "tipo": "RegexReplace",
                 "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
@@ -24,6 +18,12 @@
                 "nome": "",
                 "tipo": "RegexReplace",
                 "de": "Nome da Empresa.+",
+                "para": ""
+            },
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]

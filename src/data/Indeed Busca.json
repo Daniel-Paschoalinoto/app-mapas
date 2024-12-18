@@ -9,12 +9,6 @@
         "xpath": "//*[contains(@class, 'job_seen_beacon')]//td[1]",
         "processadores": [
             {
-                "nome": "padraoTitulo",
-                "tipo": "",
-                "de": "",
-                "para": ""
-            },
-            {
                 "nome": "",
                 "tipo": "RegexMatch",
                 "de": ".+Nome da Empresa",
@@ -24,6 +18,12 @@
                 "nome": "",
                 "tipo": "RegexReplace",
                 "de": "Nome da Empresa",
+                "para": ""
+            },
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]
