@@ -62,7 +62,7 @@ function moveMenuLeft() {
 }
 
 button {
-  font-size: 1rem;
+  font-size: 0.95em;
   line-height: 1.5;
 }
 
