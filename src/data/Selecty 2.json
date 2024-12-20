@@ -164,7 +164,7 @@
     "total_anuncios_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class,'attrs') and contains(text( ),'found')]",
+        "xpath": "//*[contains(@class,'attrs') and contains(text( ),'encontradas')]",
         "processadores": [
             {
                 "nome": "",
