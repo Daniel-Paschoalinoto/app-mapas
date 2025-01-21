@@ -37,7 +37,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "descricaoPadrao",
+        "xpath": "//[@class='description__container' and contains(.,'Atribuições')]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
@@ -47,8 +47,8 @@
             },
             {
                 "nome": "",
-                "tipo": "Replace",
-                "de": "Atribuições.",
+                "tipo": "RegexReplace",
+                "de": "Atribuições.|Atribuições",
                 "para": ""
             }
         ]
@@ -111,9 +111,9 @@
         ]
     },
     "url_detalhe": {
-        "tipo": "",
+        "tipo": "href",
         "comentario": "",
-        "xpath": ""
+        "xpath": "//[contains(@class, 'jobvipcandidacy')]//h2//a"
     },
     "salario": {
         "posclick": "",
@@ -135,11 +135,11 @@
         ]
     },
     "paginacao": {
-        "tipo": "eval",
+        "tipo": "",
         "comentario": "",
-        "parametro": "eval",
-        "rota_principal": "script",
-        "script": "document.querySelector('#pagination > ul > li.material-icons.paginationItem.paginationNext').click()"
+        "parametro": "?Page=2",
+        "rota_principal": "https://www.bne.com.br/vagas-de-emprego/Usa%20park",
+        "script": ""
     },
     "total_vagas": {
         "posclick": "",
