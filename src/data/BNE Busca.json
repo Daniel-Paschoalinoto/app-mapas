@@ -37,7 +37,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//[@class='description__container' and contains(.,'Atribuições')]",
+        "xpath": "//*[@class='description__container' and contains(.,'Atribuições')]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
@@ -113,7 +113,7 @@
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",
-        "xpath": "//[contains(@class, 'jobvipcandidacy')]//h2//a"
+        "xpath": "//*[contains(@class, 'jobvipcandidacy')]//h2//a"
     },
     "salario": {
         "posclick": "",
