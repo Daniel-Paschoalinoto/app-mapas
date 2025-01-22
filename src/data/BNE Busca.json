@@ -66,8 +66,8 @@
             },
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "SplitLast",
+                "de": ",",
                 "para": ""
             },
             {
@@ -113,7 +113,7 @@
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",
-        "xpath": "//*[contains(@class, 'jobvipcandidacy')]//h2//a"
+        "xpath": "(//*[@class='joblist__list']/section)[position() < last()]//h2//a"
     },
     "salario": {
         "posclick": "",
