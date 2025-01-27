@@ -123,11 +123,11 @@
         ]
     },
     "paginacao": {
-        "tipo": "",
+        "tipo": "eval",
         "comentario": "",
-        "parametro": "",
-        "rota_principal": "",
-        "script": ""
+        "parametro": "eval",
+        "rota_principal": "script",
+        "script": "document.querySelector('[data-test='p-next']').click()"
     },
     "total_vagas": {
         "posclick": "",
