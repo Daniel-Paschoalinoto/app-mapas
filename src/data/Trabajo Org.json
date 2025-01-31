@@ -6,8 +6,20 @@
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='d-flex flex-column justify-content-center']/h2",
+        "xpath": "//ul[@class='list-group nf-job-list']/li",
         "processadores": [
+            {
+                "nome": "",
+                "tipo": "RegexReplace",
+                "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "RegexMatch",
+                "de": "(.+)(?= há \\d+ (semana|dia|hora|mes)(?:es)?)|(.+)(?= \\d+ (semana|dia|hora|mes)(?:es)?)",
+                "para": ""
+            },
             {
                 "nome": "padraoTitulo",
                 "tipo": "",
@@ -21,36 +33,6 @@
         "comentario": "",
         "xpath": "//*[@class='nf-job-list-desc-box mt-4']",
         "processadores": [
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "Replace",
-                "de": "Tempo inteiro",
-                "para": "&"
-            },
-            {
-                "nome": "",
-                "tipo": "SplitLast",
-                "de": "&",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "Replace",
-                "de": "Relatar este trabalho",
-                "para": "&"
-            },
-            {
-                "nome": "",
-                "tipo": "SplitFirst",
-                "de": "&",
-                "para": ""
-            },
             {
                 "nome": "padraoDescricao",
                 "tipo": "",
