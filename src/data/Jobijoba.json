@@ -44,12 +44,12 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "/html/body/div[4]/div[2]/div[2]/div[1]/div/a/div[1]/div/span[1]/span[2]",
+        "xpath": "//*[contains(@class, 'icon-map-marker')]/following::span[1]",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "SplitFirst",
+                "de": "(",
                 "para": ""
             },
             {
