@@ -111,11 +111,11 @@
         ]
     },
     "paginacao": {
-        "tipo": "",
-        "comentario": "Será criada quando necessário.",
-        "parametro": "",
-        "rota_principal": "",
-        "script": ""
+        "tipo": "eval",
+        "comentario": "",
+        "parametro": "eval",
+        "rota_principal": "script",
+        "script": "document.querySelector(\"[aria-label='Ir para a próxima página']\").click()"
     },
     "total_vagas": {
         "posclick": "",
