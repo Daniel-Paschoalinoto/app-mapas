@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//*[@id='__next']//section[1]//li"
+        "xpath": "//section[contains(@class,'grid')]/div"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='__next']//section[1]//h3/text( )",
+        "xpath": "//section[contains(@class,'grid')]//a/@title",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -32,18 +32,18 @@
     "cidade": {
         "posclick": "",
         "comentario": "Em caso de filtro não inserir o processador 'Local não informado'",
-        "xpath": "//*[@data-icon='location_on']/following-sibling::text( )",
+        "xpath": "//span[@data-icon='location_on']/parent::span/following-sibling::text( )",
         "processadores": [
-            {
-                "nome": "",
-                "tipo": "SplitLast",
-                "de": ",",
-                "para": ""
-            },
             {
                 "nome": "",
                 "tipo": "SplitFirst",
                 "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "SplitLast",
+                "de": ",",
                 "para": ""
             },
             {
@@ -57,7 +57,7 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@data-icon='location_on']/following-sibling::text( )",
+        "xpath": "//span[@data-icon='location_on']/parent::span/following-sibling::text( )",
         "processadores": [
             {
                 "nome": "",
@@ -74,7 +74,7 @@
         ]
     },
     "tipo": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
         "xpath": "//*[@class='flex flex-wrap gap-2']",
         "processadores": [
@@ -87,19 +87,19 @@
         ]
     },
     "url_detalhe": {
-        "tipo": "click",
+        "tipo": "href",
         "comentario": "",
-        "xpath": "//button[contains(text( ),'Ver vaga')]"
+        "xpath": "//section[contains(@class,'grid')]//a/@title"
     },
     "salario": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@data-icon='monetization_on']/following-sibling::text( )",
+        "xpath": "//*[@data-icon='monetization_on']/parent::span/following-sibling::text( )",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "Replace",
-                "de": "R$",
+                "tipo": "SplitLast",
+                "de": "$",
                 "para": ""
             },
             {
@@ -120,7 +120,7 @@
     "total_vagas": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@data-icon='business_center']/following-sibling::text( )",
+        "xpath": "//*[@data-icon='business_center']/parent::span/following-sibling::text( )",
         "processadores": [
             {
                 "nome": "",
@@ -139,7 +139,7 @@
     "total_vagas_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//p[contains(., 'Mostrando')]//strong",
+        "xpath": "",
         "processadores": [
             {
                 "nome": "",
