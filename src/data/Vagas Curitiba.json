@@ -16,6 +16,12 @@
             },
             {
                 "nome": "",
+                "tipo": "SplitFirst",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
                 "tipo": "RegexReplace",
                 "de": "Nome da Empresa.+",
                 "para": ""
@@ -54,8 +60,8 @@
             },
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "SplitFirst",
+                "de": "-",
                 "para": ""
             },
             {
