@@ -30,7 +30,7 @@
                 "nome": "",
                 "tipo": "RegexReplace",
                 "de": "[0-9]",
-                "para": ""
+                "para": "/"
             },
             {
                 "nome": "",
@@ -55,7 +55,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "descricaoPadrao",
+        "xpath": "//*[contains(@class, 'postie-post')]//p[contains(normalize-space(), 'Responsabilidades:')]",
         "processadores": [
             {
                 "nome": "",
