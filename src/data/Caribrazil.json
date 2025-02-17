@@ -1,23 +1,17 @@
 {
     "root": {
-        "comentario": "Esse layout também serve para o domínio empregosvagasbh.com.br",
-        "xpath": "//article[contains(@class, 'jobs') and not(descendant::*[contains(@class, 'jobs__selo')])]"
+        "comentario": "",
+        "xpath": "//*[contains(@id, 'searchResult')]/div[contains(@class, 'item')][h3]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//article[contains(@class, 'jobs') and not(descendant::*[contains(@class, 'jobs__selo')])]",
+        "xpath": "//*[contains(@id, 'searchResult')]/div[contains(@class, 'item')][h3]",
         "processadores": [
             {
                 "nome": "",
                 "tipo": "RegexReplace",
                 "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "SplitFirst",
-                "de": "-",
                 "para": ""
             },
             {
@@ -35,12 +29,12 @@
         ]
     },
     "descricao": {
-        "posclick": true,
+        "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='jobs__desc']",
+        "xpath": "descricaoPadrao",
         "processadores": [
             {
-                "nome": "padraoDescricao",
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""
@@ -50,7 +44,7 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='jobs__regiao']",
+        "xpath": "//*[contains(@id, 'searchResult')]/div[contains(@class, 'item')][h3]//*[contains(@class, 'itemCity')]",
         "processadores": [
             {
                 "nome": "",
@@ -60,8 +54,8 @@
             },
             {
                 "nome": "",
-                "tipo": "SplitFirst",
-                "de": "-",
+                "tipo": "",
+                "de": "",
                 "para": ""
             },
             {
@@ -75,7 +69,7 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='jobs__regiao']",
+        "xpath": "//*[contains(@id, 'searchResult')]/div[contains(@class, 'item')][h3]//*[contains(@class, 'itemCity')]",
         "processadores": [
             {
                 "nome": "",
@@ -105,9 +99,9 @@
         ]
     },
     "url_detalhe": {
-        "tipo": "href",
+        "tipo": "",
         "comentario": "",
-        "xpath": "//article[contains(@class, 'jobs') and not(descendant::*[contains(@class, 'jobs__selo')])]//a"
+        "xpath": ""
     },
     "salario": {
         "posclick": "",
@@ -129,11 +123,11 @@
         ]
     },
     "paginacao": {
-        "tipo": "eval",
+        "tipo": "",
         "comentario": "",
-        "parametro": "eval",
-        "rota_principal": "script",
-        "script": "document.querySelector('.next.page-numbers').click();"
+        "parametro": "/2",
+        "rota_principal": "https://empregos.caribrazil.com/empregos/carropel-carrocerias",
+        "script": ""
     },
     "total_vagas": {
         "posclick": "",
