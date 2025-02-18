@@ -118,7 +118,7 @@
         "script": ""
     },
     "total_vagas": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
         "xpath": "//*[@data-icon='business_center']/parent::span/following-sibling::text( )",
         "processadores": [
