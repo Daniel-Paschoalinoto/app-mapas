@@ -44,7 +44,7 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='location']",
+        "xpath": "//*[@class='result mt-2']//*[@class='location']",
         "processadores": [
             {
                 "nome": "",
@@ -101,7 +101,7 @@
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",
-        "xpath": "//a[@class='out']"
+        "xpath": "//*[@class='result mt-2']//a[@class='out']"
     },
     "salario": {
         "posclick": "",
