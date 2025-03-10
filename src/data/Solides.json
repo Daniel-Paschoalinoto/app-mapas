@@ -92,7 +92,7 @@
         "xpath": "//section[contains(@class,'grid')]//a/@title"
     },
     "salario": {
-        "posclick": "",
+        "posclick": true,
         "comentario": "",
         "xpath": "//*[@data-icon='monetization_on']/parent::span/following-sibling::text( )",
         "processadores": [
