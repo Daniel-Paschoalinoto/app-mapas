@@ -1,25 +1,13 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//ul[@id='job-list']/li"
+        "xpath": "//ul[@id='job-list'][contains(., 'Nome da Empresa')]/li"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//ul[@id='job-list']/li",
+        "xpath": "//ul[@id='job-list']/li//a",
         "processadores": [
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "Nome da Empresa.+",
-                "para": ""
-            },
             {
                 "nome": "padraoTitulo",
                 "tipo": "",

@@ -1,25 +1,13 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//*[@class='result mt-2']"
+        "xpath": "//*[@class='result mt-2'][contains(., 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='col-md-12' and position() < last()]",
+        "xpath": "//*[@class='col-md-12' and position() < last()]//a",
         "processadores": [
-            {
-                "nome": "",
-                "tipo": "RegexMatch",
-                "de": ".+Nome da empresa",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "Nome da empresa",
-                "para": ""
-            },
             {
                 "nome": "padraoTitulo",
                 "tipo": "",

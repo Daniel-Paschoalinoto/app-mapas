@@ -1,33 +1,27 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "(//*[@class='joblist__list']/section)[position() < last()]"
+        "xpath": "(//*[@class='joblist__list']/section[contains(., 'Nome da Empresa')])"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='job__header is-list']",
+        "xpath": "//*[@class='job__header is-list']//a/text( )",
         "processadores": [
             {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "Replace",
-                "de": "Cargo",
-                "para": "&"
-            },
-            {
-                "nome": "",
-                "tipo": "SplitFirst",
-                "de": "&",
-                "para": ""
-            },
-            {
                 "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""

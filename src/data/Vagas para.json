@@ -1,25 +1,13 @@
 {
     "root": {
         "comentario": "Esse mapa é para urls como vagasparasc.com.br/vagasparasp.com.br",
-        "xpath": "//*[@class='job-card-search']"
+        "xpath": "//*[@class='job-card-search'][contains(., 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='job-card-search']",
+        "xpath": "//*[@class='job-card-search']//h3",
         "processadores": [
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "Nome da Empresa.+",
-                "para": ""
-            },
             {
                 "nome": "padraoTitulo",
                 "tipo": "",

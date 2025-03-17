@@ -1,25 +1,13 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//ul[@class='list-group nf-job-list']/li"
+        "xpath": "//ul[@class='list-group nf-job-list'][contains(., 'Nome da Empresa')]/li"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//ul[@class='list-group nf-job-list']/li",
+        "xpath": "//ul[@class='list-group nf-job-list']/li//a",
         "processadores": [
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "^(?:(?!Nome da Empresa)[\\s\\S])*$",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "RegexMatch",
-                "de": "(.+)(?= há \\d+ (semana|dia|hora|mes)(?:es)?)|(.+)(?= \\d+ (semana|dia|hora|mes)(?:es)?)",
-                "para": ""
-            },
             {
                 "nome": "padraoTitulo",
                 "tipo": "",
