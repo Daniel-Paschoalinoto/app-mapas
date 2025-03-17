@@ -1,16 +1,13 @@
 ## Build em: https://daniel-paschoalinoto.github.io/app-mapas/
 
-This template should help get you started developing with Vue 3 in Vite.
+Projeto feito em Vue3 com Vite pro build.  
+Foi criado para facilitar e organizar dados importantes e frequentemente usados pelo meu setor.
 
-## Recommended IDE Setup
+## Setup recomendado:
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Setup do projeto:
 
 ```sh
 npm install
