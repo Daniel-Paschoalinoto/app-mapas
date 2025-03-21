@@ -6,7 +6,7 @@
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='job__header is-list']//a/text( )",
+        "xpath": "//*[@class='job__detail']//span",
         "processadores": [
             {
                 "nome": "padraoTitulo",
