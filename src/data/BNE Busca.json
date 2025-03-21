@@ -6,7 +6,7 @@
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//strong[contains(.,'Cargo/Função:')]/following-sibling::span[1]/text()",
+        "xpath": "//strong[contains(.,'Cargo/Função:')]/following-sibling::span[1]",
         "processadores": [
             {
                 "nome": "padraoTitulo",
