@@ -31,7 +31,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@class='job-description']/text( )",
+        "xpath": "//*[@class='job-description']/text( )[1]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
