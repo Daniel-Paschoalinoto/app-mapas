@@ -1,7 +1,7 @@
 {
     "root": {
-        "comentario": "",
-        "xpath": "//ul[@class='list-group nf-job-list'][contains(., 'Nome da Empresa')]/li"
+        "comentario": "Usar o nome da empresa em minúsculo",
+        "xpath": "//ul[contains(@class, 'list-group')]/li[.//img[contains(translate(@alt, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')]]"
     },
     "titulo": {
         "posclick": "",
@@ -17,12 +17,12 @@
         ]
     },
     "descricao": {
-        "posclick": true,
+        "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='nf-job-list-desc-box mt-4']",
+        "xpath": "descricaoPadrao",
         "processadores": [
             {
-                "nome": "padraoDescricao",
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""
