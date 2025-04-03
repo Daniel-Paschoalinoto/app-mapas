@@ -1,7 +1,7 @@
 {
     "root": {
-        "comentario": "",
-        "xpath": "(//*[@class='joblist__list']/section[contains(., 'Nome da Empresa')])"
+        "comentario": "Usar o nome da empresa em minúsculo",
+        "xpath": "(//*[@class='joblist__list']/section[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')])"
     },
     "titulo": {
         "posclick": "",
