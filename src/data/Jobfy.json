@@ -89,7 +89,7 @@
     "url_detalhe": {
         "tipo": "click",
         "comentario": "",
-        "xpath": "//button[contains(@class, 'default-button pink keep-small')]"
+        "xpath": "//button[contains(@id, 'btn-see-vacancie')]"
     },
     "salario": {
         "posclick": "",
