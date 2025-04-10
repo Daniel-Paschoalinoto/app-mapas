@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//*[@class='offer'][contains(., 'Nome da Empresa')]"
+        "xpath": "//*[@class='offer'][contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='offer-header']/p",
+        "xpath": "//*[@class='offer-header-title']/text( )",
         "processadores": [
             {
                 "nome": "padraoTitulo",

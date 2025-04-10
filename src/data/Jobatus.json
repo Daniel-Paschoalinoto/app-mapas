@@ -1,12 +1,12 @@
 {
     "root": {
-        "comentario": "",
+        "comentario": "Usar o nome da empresa no mesmo case que o site.",
         "xpath": "//*[@class='result mt-2'][contains(., 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='col-md-12' and position() < last()]//a",
+        "xpath": "//*[@class='result mt-2']//*[contains(@class, 'jobtitle')]/a/text( )",
         "processadores": [
             {
                 "nome": "padraoTitulo",
