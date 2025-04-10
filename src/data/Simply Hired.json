@@ -1,7 +1,7 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//ul[@id='job-list'][contains(., 'Nome da Empresa')]/li"
+        "xpath": "//ul[@id='job-list']/li[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@data-testid='viewJobDetailsSectionTitle' and contains(., 'Descrição completa da vaga')]/following-sibling::div[1]",
+        "xpath": "//ul[@id='job-list']/li//a/text( )",
         "processadores": [
             {
                 "nome": "padraoDescricao",
