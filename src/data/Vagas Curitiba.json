@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "Esse layout também serve para o domínio empregosvagasbh.com.br",
-        "xpath": "//*[contains(@class,'jobs__list middle')][contains(., 'Nome da Empresa')]//article[contains(@class, 'jobs')][.//a]"
+        "xpath": "//*[contains(@class,'jobs__list middle')][contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')]//article[contains(@class, 'jobs')][.//a]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class,'jobs__list middle')]//h3",
+        "xpath": "//*[contains(@class,'jobs__list middle')]//h3/text( )",
         "processadores": [
             {
                 "nome": "padraoTitulo",
