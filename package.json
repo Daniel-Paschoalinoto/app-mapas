@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
-    "update": "git add . && git commit -m \"Ajuste Simply Hired\" && git push origin main"
+    "update": "git add . && git commit -m \"Atualizações mapa.\" && git push origin main"
   },
   "dependencies": {
     "vue": "^3.5.12"

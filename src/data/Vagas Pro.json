@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//*[contains(@class, 'col-lg-12') and contains(@id, '/job')][contains(., 'Nome da Empresa')]"
+        "xpath": "//*[contains(@class, 'col-lg-12') and contains(@id, '/job')][contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@class, 'col-lg-12') and contains(@id, '/job')]//h3",
+        "xpath": "//*[contains(@class, 'col-lg-12') and contains(@id, '/job')]//h3/text( )",
         "processadores": [
             {
                 "nome": "padraoTitulo",
