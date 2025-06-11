@@ -1,8 +1,3 @@
-## Build em: https://daniel-paschoalinoto.github.io/app-mapas/
-
-Projeto feito em Vue3 com Vite pro build.  
-Foi criado para facilitar e organizar dados importantes e frequentemente usados pelo meu setor.
-
 ## Updates:
 
 1.0.0 - Versão com módulos padrão Orion e jsons.  
