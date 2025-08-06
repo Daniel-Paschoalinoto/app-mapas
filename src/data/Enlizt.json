@@ -6,7 +6,7 @@
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//article[@data-department and contains(@class, 'department-list')]//span[1]",
+        "xpath": "//*[@class='title-text']",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -32,7 +32,7 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//article[@data-department and contains(@class, 'department-list')]//span[2]",
+        "xpath": "//*[@class='location']",
         "processadores": [
             {
                 "nome": "",
@@ -57,7 +57,7 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//article[@data-department and contains(@class, 'department-list')]//span[2]",
+        "xpath": "//*[@class='location']",
         "processadores": [
             {
                 "nome": "",
