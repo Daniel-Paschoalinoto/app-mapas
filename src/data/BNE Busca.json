@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "Usar o nome da empresa em minúsculo",
-        "xpath": "(//*[@class='joblist__list']/section[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')])"
+        "xpath": "(//*[@class='lista_vagas__grid']/section[contains(translate(., 'ÇÃABCDEFGHIJKLMNOPQRSTUVWXYZ', 'çãabcdefghijklmnopqrstuvwxyz'), 'Nome da Empresa')])"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//strong[contains(.,'Cargo/Função:')]/following-sibling::span[1]",
+        "xpath": "//*[@class='job__card__header']",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -31,7 +31,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@class='description__container' and contains(.,'Atribuições')]",
+        "xpath": "//h2[contains(., 'Atribuições')]/following-sibling::p[1]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
@@ -50,7 +50,7 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//h3[@class='job__detail' and contains(.,'Localização')]/text( )[normalize-space( )]",
+        "xpath": "/html/body/main/section[2]/div/section[1]/div[1]/section/div[1]/div[2]/h3[4]",
         "processadores": [
             {
                 "nome": "",
@@ -75,7 +75,7 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//h3[@class='job__detail' and contains(.,'Localização')]/text( )[normalize-space( )]",
+        "xpath": "/html/body/main/section[2]/div/section[1]/div[1]/section/div[1]/div[2]/h3[4]",
         "processadores": [
             {
                 "nome": "",
@@ -105,9 +105,9 @@
         ]
     },
     "url_detalhe": {
-        "tipo": "href",
+        "tipo": "click",
         "comentario": "",
-        "xpath": "(//*[@class='joblist__list']/section)[position() < last()]//h2//a"
+        "xpath": "//*[@class='job__card__header']"
     },
     "salario": {
         "posclick": "",
