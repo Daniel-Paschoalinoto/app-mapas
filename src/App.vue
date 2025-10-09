@@ -26,31 +26,42 @@ const mapsList = ref([]);
 const isLoaded = ref(false);
 const menuOpened = ref(false);
 
-async function loadMaps() {
-  const mapFiles = import.meta.glob('@/data/*.json');
+const mapFiles = import.meta.glob('@/data/*.json');
 
-  for (const path in mapFiles) {
-    const mapData = await mapFiles[path]();
-    const map = { nome: path.split('/').pop().replace('.json', ''), ...mapData };
-    mapsList.value.push(map);
-  }
+async function loadInitialData() {
+  const paths = Object.keys(mapFiles);
+  mapsList.value = paths.map(path => {
+    const nome = path.split('/').pop().replace('.json', '');
+    return { nome: nome, loader: mapFiles[path], loaded: false };
+  });
 
   if (mapsList.value.length > 0) {
-    selectedMap.value = mapsList.value[0];
+    await selectMap(mapsList.value[0]);
   }
 
   isLoaded.value = true;
 }
 
-function selectMap(map) {
-  selectedMap.value = map;
+async function selectMap(map) {
+  if (!map.loaded) {
+    const mapData = await map.loader();
+    const newSelectedMap = { ...map, ...mapData, loaded: true };
+    selectedMap.value = newSelectedMap;
+
+    const mapIndex = mapsList.value.findIndex(m => m.nome === map.nome);
+    if (mapIndex !== -1) {
+      mapsList.value[mapIndex] = newSelectedMap;
+    }
+  } else {
+    selectedMap.value = map;
+  }
 }
 
 function handleMenuOpen() {
   menuOpened.value = true;
 }
 
-onMounted(loadMaps);
+onMounted(loadInitialData);
 
 watch(selectedMap, (newMap) => {
   if (newMap.nome) {
