@@ -32,7 +32,7 @@
     "cidade": {
         "posclick": true,
         "comentario": "",
-        "xpath": "(//span[@data-component-name='Text'])[3]",
+        "xpath": "(//span[@data-component-name='Text'])[2]",
         "processadores": [
             {
                 "nome": "",
@@ -57,7 +57,7 @@
     "estado": {
         "posclick": true,
         "comentario": "",
-        "xpath": "(//span[@data-component-name='Text'])[3]",
+        "xpath": "(//span[@data-component-name='Text'])[2]",
         "processadores": [
             {
                 "nome": "",
