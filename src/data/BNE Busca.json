@@ -107,7 +107,7 @@
     "url_detalhe": {
         "tipo": "click",
         "comentario": "",
-        "xpath": "/html/body/main/section[2]/div/section[1]/div[1]/section/div[1]/div[1]/h2/strong/a"
+        "xpath": "/html/body/main/section[2]/div/section[1]/div[1]/section/div[1]/div[1]/h2/strong"
     },
     "salario": {
         "posclick": "",
