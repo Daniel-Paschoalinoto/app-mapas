@@ -37,7 +37,7 @@
             {
                 "nome": "",
                 "tipo": "SpliFirst",
-                "de": "-",
+                "de": ",",
                 "para": ""
             },
             {
@@ -164,7 +164,7 @@
     "total_anuncios_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "",
+        "xpath": "//*[@id='jobs']/a/div/span[1]",
         "processadores": [
             {
                 "nome": "",
