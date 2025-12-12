@@ -1,0 +1,183 @@
+{
+    "root": {
+        "comentario": "",
+        "xpath": "//*[@data-joblisting='true']"
+    },
+    "titulo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@data-test='job-title']",
+        "processadores": [
+            {
+                "nome": "padraoTitulo",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "descricao": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "descricaoPadrao",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "cidade": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "//*[@data-test='emp-location']",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "SpliFirst",
+                "de": "-",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "estado": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "tipo": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "url_detalhe": {
+        "tipo": "",
+        "comentario": "",
+        "xpath": ""
+    },
+    "salario": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "paginacao": {
+        "tipo": "eval",
+        "comentario": "",
+        "parametro": "eval",
+        "rota_principal": "script",
+        "script": "[...document.querySelectorAll('button')].find(b => b.textContent.includes('Carregar')).click()"
+    },
+    "total_vagas": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_vagas_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    },
+    "total_anuncios_site": {
+        "posclick": "",
+        "comentario": "",
+        "xpath": "",
+        "processadores": [
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            }
+        ]
+    }
+}

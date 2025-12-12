@@ -6,3 +6,4 @@
 1.3.0 - Adição componente header, ajustes de estilo e posicionamento.  
 1.4.0 - Tornando processador padrão tipo menos verboso.  
 1.5.0 - Inclusão da versão no header.
+1.6.0 - Fluxo de CD
