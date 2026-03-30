@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@id='box-vaga']/div/div[2]/div[2]",
+        "xpath": "//*[@class='vaga-item'][contains(.,'Descrição da Vaga')]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
