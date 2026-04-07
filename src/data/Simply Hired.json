@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//ul[@id='job-list']/li//a/text( )",
+        "xpath": "//*[@data-testid='viewJobDetailsSectionTitle' and contains(.,'Descrição completa da vaga')]/following-sibling::div[1]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
