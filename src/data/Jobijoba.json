@@ -1,7 +1,7 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//*[@class='offer'][contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÇ', 'abcdefghijklmnopqrstuvwxyzáàãâäéèêëíìîïóòõôöúùûüç'), 'Nome da Empresa')]]"
+        "xpath": "//*[@class='offer'][contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÇ', 'abcdefghijklmnopqrstuvwxyzáàãâäéèêëíìîïóòõôöúùûüç'), 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
