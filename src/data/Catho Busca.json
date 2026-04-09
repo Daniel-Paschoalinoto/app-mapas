@@ -1,7 +1,7 @@
 {
     "root": {
         "comentario": "Nome da empresa sempre minúsculo e sem acento.",
-        "xpath": "//*[@id='search-result']/ul/li[contains(translate(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÂÃÉÊÍÓÔÕÚÇ','abcdefghijklmnopqrstuvwxyzáàâãéêíóôõúç'),'áàâãéêíóôõúç','aaaaeeiooouuc'),'nome da empresa')]"
+        "xpath": "//*[@id='search-result']/ul/li[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇÑ', 'abcdefghijklmnopqrstuvwxyzaaaaaeeeeiiiiooooouuuucn'), 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
