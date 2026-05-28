@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "Nome da empresa sempre minúsculo e sem acento.",
-        "xpath": "//*[@id='search-result']/ul/li[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇÑ', 'abcdefghijklmnopqrstuvwxyzaaaaaeeeeiiiiooooouuuucn'), 'Nome da Empresa')]"
+        "xpath": "//*[@class='list_offers']/ul/li[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇÑ', 'abcdefghijklmnopqrstuvwxyzaaaaaeeeeiiiiooooouuuucn'), 'Nome da Empresa')]"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='search-result']/ul/li/article/article/header/div//h2/a",
+        "xpath": "//*[@class='list_offers']//h2",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -31,12 +31,18 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@class='job-description']/text( )[1]",
+        "xpath": "//*[@class='text-16' and contains(.,'Sobre a vaga')]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
                 "tipo": "",
                 "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "Sobre a vaga",
                 "para": ""
             }
         ]
@@ -44,11 +50,11 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='search-result']//button[1]/a/text( )",
+        "xpath": "//*[@class='list_offers']//p[span[@class='icon i_job_location']]/text( )[normalize-space( )]",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "SplitFirst",
+                "tipo": "Replace",
                 "de": "-",
                 "para": ""
             },
@@ -69,24 +75,24 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='search-result']//button[1]/a/text( )",
+        "xpath": "",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "RegexMatch",
-                "de": "-.+",
+                "tipo": "",
+                "de": "",
                 "para": ""
             },
             {
                 "nome": "",
-                "tipo": "Replace",
-                "de": "-",
+                "tipo": "",
+                "de": "",
                 "para": ""
             },
             {
                 "nome": "",
-                "tipo": "SplitFirst",
-                "de": "(",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]
@@ -107,29 +113,29 @@
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",
-        "xpath": "//*[@id='search-result']//h2/a"
+        "xpath": "//*[@class='list_offers']//h2/a"
     },
     "salario": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//div[contains(@class,'salary')]",
+        "xpath": "",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "RegexReplace",
-                "de": " a ",
-                "para": "&"
-            },
-            {
-                "nome": "",
-                "tipo": "SplitFirst",
-                "de": "&",
+                "tipo": "",
+                "de": "",
                 "para": ""
             },
             {
                 "nome": "",
-                "tipo": "SplitLast",
-                "de": "$",
+                "tipo": "",
+                "de": "",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]
@@ -144,7 +150,7 @@
     "total_vagas": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='search-result']//button[1]/a/text( )",
+        "xpath": "//*[@class='list_offers']//p[span[@class='icon i_job_location']]/strong",
         "processadores": [
             {
                 "nome": "",
