@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@class='permalink-subtitle']/following-sibling::p[1]",
+        "xpath": "//*[@class='permalink-subtitle']/following-sibling::div[1]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
