@@ -153,6 +153,7 @@ async function exibirNotificacao(button, mensagem) {
 const processadoresMapped = ref({});
 
 function mapProcessadores() {
+  processadoresMapped.value = {};
   Object.keys(props.map).forEach(key => {
     if (props.map[key].processadores) {
       processadoresMapped.value[key] = props.map[key].processadores.flatMap(processador => {
