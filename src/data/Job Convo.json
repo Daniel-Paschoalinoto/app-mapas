@@ -19,12 +19,24 @@
     "descricao": {
         "posclick": true,
         "comentario": "Avaliar em mais vagas caso a palavra buscada deva ser 'Requisitos' ou 'Descrição'.",
-        "xpath": "//section[contains(.,'Requisitos')]",
+        "xpath": "//section[contains(.,'Requirements')]",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "RegexReplace",
-                "de": "Requisitos",
+                "tipo": "Replace",
+                "de": "Requirements",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "Minimum education",
+                "para": "&"
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "&",
                 "para": ""
             },
             {
