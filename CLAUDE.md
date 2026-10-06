@@ -11,6 +11,11 @@ texto para a área de transferência (para colar na ferramenta de configuração
 Somente leitura: não edita, não salva, não chama API. Sem backend, rotas, store, testes, lint ou TS.
 Autor: Daniel Paschoalinoto.
 
+Futuro (proposta Orion 2, 2026-10-06, em `DEV/Orion/proposta`): este app será **absorvido pelo Orion**. Os JSONs de
+`src/data/` viram templates versionados por ATS (com parâmetros, diff e rollback), e os placeholders de
+`processadoresPadrao` viram processadores nomeados do catálogo. Até lá, o app continua sendo a referência dos mapas;
+nesse contexto, só se atualiza este `CLAUDE.md` (ver "Relação com os mapas reais do Orion").
+
 ## Comandos, build e deploy
 - `npm run dev` · `npm run build` (saída em `dist/`, ignorada pelo git) · `npm run preview`.
 - Alias `@` = `src/` (vite.config.js e jsconfig.json). `base: '/app-mapas/'` em vite.config.js.
@@ -123,7 +128,7 @@ Todo arquivo tem as mesmas 12 chaves de topo e os mesmos campos:
     `padraoTipo` (20); nos demais é `""`.
   - `tipo` visto nos dados: `Replace`, `SplitFirst`, `SplitLast`, `RegexReplace`, `RegexMatch` ou vazio.
     `Eval` aparece só dentro de `processadoresPadrao` (código).
-- `posclick`: `""` ou `true` (`true` = seção em fundo escuro; o significado de negócio não está no código).
+- `posclick`: `""` ou `true` (`true` = seção em fundo escuro; no código não há significado de negócio; nos mapas reais = campo da página de detalhe, ver "Relação com os mapas reais do Orion").
 - Valores de `url_detalhe.tipo`: `href`, `click`, vazio. De `paginacao.tipo`: vazio, `eval`,
   `intercept`/`Intercept`.
 - `descricao.xpath == "descricaoPadrao"` é sentinela (ver `Descricao`).
@@ -148,6 +153,21 @@ Este app é hoje um VISUALIZADOR do conceito; o que importa levar adiante é o c
   (o app só exibe e copia; quem interpreta é a ferramenta onde o texto é colado).
 - Os mapas não têm versão nem esquema formal (sem JSON Schema); todos compartilham as mesmas chaves
   (verificado), o que sugere partirem do `padrao.json`.
+
+## Relação com os mapas reais do Orion (comparado com `Orion/baseOrion.json` de 05/10/2026)
+- Seções → `target` do Orion: `root`→`root`, `titulo`→`vaga_titulo`, `descricao`→`vaga_descricao`, `cidade`→`vaga_cidade`,
+  `estado`→`vaga_estado_sigla`, `tipo`→`vaga_tipo`, `salario`→`vaga_salario`, `url_detalhe`→`url_vaga_detalhe`,
+  `paginacao`→`paginacao`, `total_*`→mesmo nome.
+- `posclick: true` = campo lido na página de detalhe (no Orion fica no 2º item do `pipeline`, com `referrer`); conferido
+  no Solides (descrição e tipo no detalhe, o resto na listagem).
+- Processador: `tipo` ↔ `typeProcessor` (`EnumTypeProcessor`: Replace 1, RegexMatch 2, RegexReplace 3, Prefix 4, Sufix 5,
+  SplitFirst 6, SplitLast 7, Split 8, ImageSequence 9, Eval 10 = expressão C# DynamicExpresso, Dll 11); `de` ↔ `value1`,
+  `para` ↔ `value2`.
+- `"Nome da Empresa"` dentro do XPath (Trabajo Org, Catho Busca, BNE Busca, Jobijoba) é placeholder: o mapa real leva o nome
+  da empresa em minúsculas/sem acento (ver `comentario`).
+- Aderência (mapas ativos com root, título, cidade e descrição iguais ao JSON): Solides 454/457, Infojobs 275/289,
+  Pandapé 160/263 (101 usam o root antigo `//*[@id="VacancyList"]/a`; o JSON usa `//a`), Selecty 54/78, Jobs Recrutei 19/67.
+  No total, 1.117 de 2.150 ativos de ATS que têm JSON aqui.
 
 ## Lições e armadilhas (particularidades atuais, úteis para quem for ler ou reaproveitar)
 - Estado derivado de `props.map` é zerado a cada recálculo em `mapProcessadores()`; o `processadoresMapped`
