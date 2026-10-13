@@ -50,7 +50,7 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='info__vaga']//h3[contains(.,'/')]",
+        "xpath": "//*[@class='info__vaga']/div[4]",
         "processadores": [
             {
                 "nome": "",
@@ -75,18 +75,18 @@
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='info__vaga']//h3[contains(.,'/')]",
+        "xpath": "//*[@class='info__vaga']/div[4]",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "RegexMatch",
-                "de": "/.+",
+                "tipo": "SplitFirst",
+                "de": "",
                 "para": ""
             },
             {
                 "nome": "",
-                "tipo": "Replace",
-                "de": "/",
+                "tipo": "",
+                "de": "",
                 "para": ""
             }
         ]
