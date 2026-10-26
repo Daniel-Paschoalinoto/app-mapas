@@ -17,12 +17,12 @@
         ]
     },
     "descricao": {
-        "posclick": true,
+        "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='permalink-subtitle']/following-sibling::div[1]",
+        "xpath": "descricaoPadrao",
         "processadores": [
             {
-                "nome": "padraoDescricao",
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""
@@ -93,9 +93,9 @@
         ]
     },
     "url_detalhe": {
-        "tipo": "href",
+        "tipo": "",
         "comentario": "",
-        "xpath": "//*[@class='offer']//a"
+        "xpath": ""
     },
     "salario": {
         "posclick": "",
