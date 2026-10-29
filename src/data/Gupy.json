@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "Sempre inserir // no final da URL",
-        "xpath": "//*[@id='job-listing']/ul/li"
+        "xpath": "//*[@data-testid='job-list__listitem']/a"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='job-listing']/ul/li/a/div/div[1]",
+        "xpath": "//*[@data-testid='job-list__listitem-href']/div/div[1]/text( )",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "Verificar mais vagas pra ter certeza que é o melhor campo.",
-        "xpath": "//h2[contains(text(),'Responsabilidades e atribuições')]/following-sibling::div[1]",
+        "xpath": "//h2[contains(text( ),'Responsabilidades e atribuições')]/following-sibling::div[1]",
         "processadores": [
             {
                 "nome": "padraoDescricao",
@@ -32,54 +32,48 @@
     "cidade": {
         "posclick": "",
         "comentario": "Em caso de filtro não inserir processador de Trabalho Remoto",
-        "xpath": "//*[@id='job-listing']/ul/li//a/div/div[2]",
+        "xpath": "//*[@data-testid='job-list__listitem-href']/div/div[2]",
         "processadores": [
             {
                 "nome": "",
                 "tipo": "SplitFirst",
                 "de": "-",
                 "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "e Remoto|e Híbrido",
-                "para": ""
-            },
-            {
-                "nome": "",
-                "tipo": "RegexReplace",
-                "de": "Trabalho Remoto",
-                "para": "Cidade da Empresa"
             }
         ]
     },
     "estado": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='job-listing']/ul/li//a/div/div[2]",
+        "xpath": "//*[@data-testid='job-list__listitem-href']/div/div[2]",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "RegexMatch",
-                "de": "-.+",
+                "tipo": "SplitLast",
+                "de": "-",
                 "para": ""
             },
             {
                 "nome": "",
                 "tipo": "Replace",
-                "de": "-",
+                "de": " e ",
+                "para": "&"
+            },
+            {
+                "nome": "",
+                "tipo": "SplitFirst",
+                "de": "&",
                 "para": ""
             }
         ]
     },
     "tipo": {
-        "posclick": true,
+        "posclick": "",
         "comentario": "",
-        "xpath": "//span[contains(text( ), 'Modelo de trabalho:')]",
+        "xpath": "",
         "processadores": [
             {
-                "nome": "padraoTipo",
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""
@@ -89,7 +83,7 @@
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",
-        "xpath": "//*[@id='job-listing']/ul/li/a"
+        "xpath": "//*[@data-testid='job-list__listitem']/a"
     },
     "salario": {
         "posclick": "",
@@ -111,11 +105,11 @@
         ]
     },
     "paginacao": {
-        "tipo": "",
-        "comentario": "Empresa não utiliza Paginação",
-        "parametro": "",
-        "rota_principal": "",
-        "script": ""
+        "tipo": "eval",
+        "comentario": "",
+        "parametro": "eval",
+        "rota_principal": "script",
+        "script": "document.querySelector('button[aria-label='nextButtonAriaLabel']').click()"
     },
     "total_vagas": {
         "posclick": "",
@@ -158,7 +152,7 @@
     "total_anuncios_site": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[contains(@data-testid, 'job-list-amount')]/text( )",
+        "xpath": "",
         "processadores": [
             {
                 "nome": "",
