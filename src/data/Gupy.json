@@ -109,7 +109,7 @@
         "comentario": "",
         "parametro": "eval",
         "rota_principal": "script",
-        "script": "document.querySelector('button[aria-label='nextButtonAriaLabel']').click()"
+        "script": "document.querySelector('button[aria-label=\"nextButtonAriaLabel\"]')?.click();"
     },
     "total_vagas": {
         "posclick": "",
