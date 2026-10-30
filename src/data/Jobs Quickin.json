@@ -19,7 +19,7 @@
     "descricao": {
         "posclick": true,
         "comentario": "",
-        "xpath": "//*[@class='mb-4']",
+        "xpath": "//*[@class=\"two_columns__content\"]",
         "processadores": [
             {
                 "nome": "",
