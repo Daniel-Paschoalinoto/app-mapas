@@ -1,12 +1,12 @@
 {
     "root": {
         "comentario": "",
-        "xpath": "//*[@id='__layout']//tr"
+        "xpath": "//*[@class=\"loading-container\"]//a"
     },
     "titulo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='__layout']//th",
+        "xpath": "//*[@class=\"loading-container\"]//h3",
         "processadores": [
             {
                 "nome": "padraoTitulo",
@@ -22,6 +22,18 @@
         "xpath": "//*[@class='mb-4']",
         "processadores": [
             {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "Descrição",
+                "para": ""
+            },
+            {
+                "nome": "",
+                "tipo": "Replace",
+                "de": "Candidatar-se",
+                "para": ""
+            },
+            {
                 "nome": "padraoDescricao",
                 "tipo": "",
                 "de": "",
@@ -32,24 +44,24 @@
     "cidade": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@id='__layout']//td/span[1]",
+        "xpath": "//*[@class=\"loading-container\"]//p",
         "processadores": [
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "RegexReplace",
+                "de": "·(?=[^·]*$)",
                 "para": ""
             },
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "SplitLast",
+                "de": "·",
                 "para": ""
             },
             {
                 "nome": "",
-                "tipo": "",
-                "de": "",
+                "tipo": "SplitFirst",
+                "de": ",",
                 "para": ""
             }
         ]
@@ -76,10 +88,10 @@
     "tipo": {
         "posclick": "",
         "comentario": "",
-        "xpath": "//*[@class='badge badge-secondary']",
+        "xpath": "",
         "processadores": [
             {
-                "nome": "padraoTipo",
+                "nome": "",
                 "tipo": "",
                 "de": "",
                 "para": ""
@@ -89,7 +101,7 @@
     "url_detalhe": {
         "tipo": "href",
         "comentario": "",
-        "xpath": "//*[@id='__layout']//th/a"
+        "xpath": "//*[@class=\"loading-container\"]//a"
     },
     "salario": {
         "posclick": "",
@@ -113,9 +125,9 @@
     "paginacao": {
         "tipo": "",
         "comentario": "",
-        "parametro": "?page=2",
-        "rota_principal": "https://jobs.quickin.io/inoveben/jobs",
-        "script": ""
+        "parametro": "eval",
+        "rota_principal": "script",
+        "script": "document.querySelector('[aria-label=\"Próxima página\"]').click();"
     },
     "total_vagas": {
         "posclick": "",
